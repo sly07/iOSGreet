@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11DA038F1F07FCBADD3BEB0 /* Pods_iOSGreet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91E844E4C1ECD60030773E8 /* Pods_iOSGreet.framework */; };
 		A714FC412767F25200BA6F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714FC402767F25200BA6F4A /* AppDelegate.swift */; };
 		A714FC432767F25200BA6F4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714FC422767F25200BA6F4A /* SceneDelegate.swift */; };
 		A714FC452767F25200BA6F4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714FC442767F25200BA6F4A /* ViewController.swift */; };
 		A714FC482767F25200BA6F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A714FC462767F25200BA6F4A /* Main.storyboard */; };
 		A714FC4A2767F25400BA6F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A714FC492767F25400BA6F4A /* Assets.xcassets */; };
 		A714FC4D2767F25400BA6F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A714FC4B2767F25400BA6F4A /* LaunchScreen.storyboard */; };
+		A714FC58276804DF00BA6F4A /* greet.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714FC55276804DF00BA6F4A /* greet.grpc.swift */; };
+		A714FC59276804DF00BA6F4A /* greet.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714FC56276804DF00BA6F4A /* greet.pb.swift */; };
+		A714FC5A276804DF00BA6F4A /* greet.proto in Sources */ = {isa = PBXBuildFile; fileRef = A714FC57276804DF00BA6F4A /* greet.proto */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,12 @@
 		A714FC492767F25400BA6F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A714FC4C2767F25400BA6F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A714FC4E2767F25400BA6F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A714FC55276804DF00BA6F4A /* greet.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = greet.grpc.swift; sourceTree = "<group>"; };
+		A714FC56276804DF00BA6F4A /* greet.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = greet.pb.swift; sourceTree = "<group>"; };
+		A714FC57276804DF00BA6F4A /* greet.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = greet.proto; sourceTree = "<group>"; };
+		D893903B9203F1A9A1A24076 /* Pods-iOSGreet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSGreet.debug.xcconfig"; path = "Target Support Files/Pods-iOSGreet/Pods-iOSGreet.debug.xcconfig"; sourceTree = "<group>"; };
+		E2874CD625E3D27A803216C8 /* Pods-iOSGreet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSGreet.release.xcconfig"; path = "Target Support Files/Pods-iOSGreet/Pods-iOSGreet.release.xcconfig"; sourceTree = "<group>"; };
+		F91E844E4C1ECD60030773E8 /* Pods_iOSGreet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSGreet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11DA038F1F07FCBADD3BEB0 /* Pods_iOSGreet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		377FA7BE45FC3916E15EC0A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D893903B9203F1A9A1A24076 /* Pods-iOSGreet.debug.xcconfig */,
+				E2874CD625E3D27A803216C8 /* Pods-iOSGreet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A714FC342767F25200BA6F4A = {
 			isa = PBXGroup;
 			children = (
 				A714FC3F2767F25200BA6F4A /* iOSGreet */,
 				A714FC3E2767F25200BA6F4A /* Products */,
+				377FA7BE45FC3916E15EC0A8 /* Pods */,
+				D1B81468841231DF2188C708 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +78,7 @@
 		A714FC3F2767F25200BA6F4A /* iOSGreet */ = {
 			isa = PBXGroup;
 			children = (
+				A714FC542767F5F700BA6F4A /* Model */,
 				A714FC402767F25200BA6F4A /* AppDelegate.swift */,
 				A714FC422767F25200BA6F4A /* SceneDelegate.swift */,
 				A714FC442767F25200BA6F4A /* ViewController.swift */,
@@ -67,6 +90,24 @@
 			path = iOSGreet;
 			sourceTree = "<group>";
 		};
+		A714FC542767F5F700BA6F4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A714FC55276804DF00BA6F4A /* greet.grpc.swift */,
+				A714FC56276804DF00BA6F4A /* greet.pb.swift */,
+				A714FC57276804DF00BA6F4A /* greet.proto */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1B81468841231DF2188C708 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F91E844E4C1ECD60030773E8 /* Pods_iOSGreet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A714FC512767F25400BA6F4A /* Build configuration list for PBXNativeTarget "iOSGreet" */;
 			buildPhases = (
+				0C528162DF050CDD36ADE8D0 /* [CP] Check Pods Manifest.lock */,
 				A714FC392767F25200BA6F4A /* Sources */,
 				A714FC3A2767F25200BA6F4A /* Frameworks */,
 				A714FC3B2767F25200BA6F4A /* Resources */,
+				E930119F83C7B596BE4434FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +175,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C528162DF050CDD36ADE8D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSGreet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E930119F83C7B596BE4434FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSGreet/Pods-iOSGreet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSGreet/Pods-iOSGreet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSGreet/Pods-iOSGreet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A714FC392767F25200BA6F4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A714FC5A276804DF00BA6F4A /* greet.proto in Sources */,
+				A714FC58276804DF00BA6F4A /* greet.grpc.swift in Sources */,
 				A714FC452767F25200BA6F4A /* ViewController.swift in Sources */,
 				A714FC412767F25200BA6F4A /* AppDelegate.swift in Sources */,
+				A714FC59276804DF00BA6F4A /* greet.pb.swift in Sources */,
 				A714FC432767F25200BA6F4A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,6 +371,7 @@
 		};
 		A714FC522767F25400BA6F4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D893903B9203F1A9A1A24076 /* Pods-iOSGreet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +391,7 @@
 		};
 		A714FC532767F25400BA6F4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2874CD625E3D27A803216C8 /* Pods-iOSGreet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
