@@ -24,12 +24,12 @@ class ViewController: UIViewController {
             print("Client not set")
             return
         }
-        
+                
         let greeting: Greet_Greeting = .with {
             //            $0.firstName = "Mike"
             //            $0.lastName = "Sly"
             $0.firstName = firstName.text ?? ""
-            $0.lastName = lastName.text ?? ""            
+            $0.lastName = lastName.text ?? ""
         }
         
         let greetingRequest: Greet_GreetRequest = .with {

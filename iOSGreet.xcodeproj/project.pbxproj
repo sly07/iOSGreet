@@ -17,6 +17,10 @@
 		A714FC58276804DF00BA6F4A /* greet.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714FC55276804DF00BA6F4A /* greet.grpc.swift */; };
 		A714FC59276804DF00BA6F4A /* greet.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714FC56276804DF00BA6F4A /* greet.pb.swift */; };
 		A714FC5A276804DF00BA6F4A /* greet.proto in Sources */ = {isa = PBXBuildFile; fileRef = A714FC57276804DF00BA6F4A /* greet.proto */; };
+		A764EECD276A80B10017F326 /* LightingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764EECC276A80B10017F326 /* LightingViewController.swift */; };
+		A764EED0276A9B3B0017F326 /* lighting.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764EECE276A9B3B0017F326 /* lighting.pb.swift */; };
+		A764EED1276A9B3B0017F326 /* lighting.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764EECF276A9B3B0017F326 /* lighting.grpc.swift */; };
+		A764EED3276A9BA90017F326 /* lighting.proto in Sources */ = {isa = PBXBuildFile; fileRef = A764EED2276A9BA90017F326 /* lighting.proto */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		A714FC55276804DF00BA6F4A /* greet.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = greet.grpc.swift; sourceTree = "<group>"; };
 		A714FC56276804DF00BA6F4A /* greet.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = greet.pb.swift; sourceTree = "<group>"; };
 		A714FC57276804DF00BA6F4A /* greet.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = greet.proto; sourceTree = "<group>"; };
+		A764EECC276A80B10017F326 /* LightingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingViewController.swift; sourceTree = "<group>"; };
+		A764EECE276A9B3B0017F326 /* lighting.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lighting.pb.swift; sourceTree = "<group>"; };
+		A764EECF276A9B3B0017F326 /* lighting.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lighting.grpc.swift; sourceTree = "<group>"; };
+		A764EED2276A9BA90017F326 /* lighting.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = lighting.proto; sourceTree = "<group>"; };
 		D893903B9203F1A9A1A24076 /* Pods-iOSGreet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSGreet.debug.xcconfig"; path = "Target Support Files/Pods-iOSGreet/Pods-iOSGreet.debug.xcconfig"; sourceTree = "<group>"; };
 		E2874CD625E3D27A803216C8 /* Pods-iOSGreet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSGreet.release.xcconfig"; path = "Target Support Files/Pods-iOSGreet/Pods-iOSGreet.release.xcconfig"; sourceTree = "<group>"; };
 		F91E844E4C1ECD60030773E8 /* Pods_iOSGreet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSGreet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +86,7 @@
 		A714FC3F2767F25200BA6F4A /* iOSGreet */ = {
 			isa = PBXGroup;
 			children = (
+				A764EEC5276A7E630017F326 /* LightingNetwork */,
 				A714FC542767F5F700BA6F4A /* Model */,
 				A714FC402767F25200BA6F4A /* AppDelegate.swift */,
 				A714FC422767F25200BA6F4A /* SceneDelegate.swift */,
@@ -86,6 +95,7 @@
 				A714FC492767F25400BA6F4A /* Assets.xcassets */,
 				A714FC4B2767F25400BA6F4A /* LaunchScreen.storyboard */,
 				A714FC4E2767F25400BA6F4A /* Info.plist */,
+				A764EECC276A80B10017F326 /* LightingViewController.swift */,
 			);
 			path = iOSGreet;
 			sourceTree = "<group>";
@@ -98,6 +108,16 @@
 				A714FC57276804DF00BA6F4A /* greet.proto */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A764EEC5276A7E630017F326 /* LightingNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				A764EED2276A9BA90017F326 /* lighting.proto */,
+				A764EECF276A9B3B0017F326 /* lighting.grpc.swift */,
+				A764EECE276A9B3B0017F326 /* lighting.pb.swift */,
+			);
+			path = LightingNetwork;
 			sourceTree = "<group>";
 		};
 		D1B81468841231DF2188C708 /* Frameworks */ = {
@@ -225,8 +245,12 @@
 				A714FC5A276804DF00BA6F4A /* greet.proto in Sources */,
 				A714FC58276804DF00BA6F4A /* greet.grpc.swift in Sources */,
 				A714FC452767F25200BA6F4A /* ViewController.swift in Sources */,
+				A764EED1276A9B3B0017F326 /* lighting.grpc.swift in Sources */,
 				A714FC412767F25200BA6F4A /* AppDelegate.swift in Sources */,
 				A714FC59276804DF00BA6F4A /* greet.pb.swift in Sources */,
+				A764EED3276A9BA90017F326 /* lighting.proto in Sources */,
+				A764EED0276A9B3B0017F326 /* lighting.pb.swift in Sources */,
+				A764EECD276A80B10017F326 /* LightingViewController.swift in Sources */,
 				A714FC432767F25200BA6F4A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0fx-yq-I9Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -110,7 +110,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-228" y="157"/>
+        </scene>
+        <!--Lighting View Controller-->
+        <scene sceneID="0BR-aU-ehl">
+            <objects>
+                <viewController id="0fx-yq-I9Z" customClass="LightingViewController" customModule="iOSGreet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1kN-vx-bIo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLd-mS-d3a">
+                                <rect key="frame" x="186" y="493" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rC9-MV-6Ri">
+                                <rect key="frame" x="182.5" y="244" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="0fx-yq-I9Z" eventType="valueChanged" id="ud6-Oo-2up"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dMX-wL-9Q3">
+                                <rect key="frame" x="105" y="433" width="204" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4GQ-JM-XJT"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="0fx-yq-I9Z" eventType="valueChanged" id="haj-k4-Yli"/>
+                                    <action selector="touchDown:" destination="0fx-yq-I9Z" eventType="touchDown" id="soT-xo-fyn"/>
+                                    <action selector="touchUpInside:" destination="0fx-yq-I9Z" eventType="touchUpInside" id="beQ-YE-OE2"/>
+                                    <action selector="touchUpOutside:" destination="0fx-yq-I9Z" eventType="touchUpOutside" id="xQK-fl-SK1"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kdN-wb-Zmd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dMX-wL-9Q3" firstAttribute="centerX" secondItem="1kN-vx-bIo" secondAttribute="centerX" id="Aj3-P3-Ec3"/>
+                            <constraint firstItem="dLd-mS-d3a" firstAttribute="top" secondItem="dMX-wL-9Q3" secondAttribute="bottom" constant="30" id="Fjw-Is-5ID"/>
+                            <constraint firstItem="dMX-wL-9Q3" firstAttribute="centerY" secondItem="1kN-vx-bIo" secondAttribute="centerY" id="H3I-bo-cuR"/>
+                            <constraint firstItem="rC9-MV-6Ri" firstAttribute="centerX" secondItem="1kN-vx-bIo" secondAttribute="centerX" id="RYO-53-2Jz"/>
+                            <constraint firstItem="rC9-MV-6Ri" firstAttribute="top" secondItem="kdN-wb-Zmd" secondAttribute="top" constant="200" id="fBr-cc-bcH"/>
+                            <constraint firstItem="dLd-mS-d3a" firstAttribute="centerX" secondItem="1kN-vx-bIo" secondAttribute="centerX" id="j2w-Qk-wru"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lightSwitch" destination="rC9-MV-6Ri" id="Zb9-1C-l7k"/>
+                        <outlet property="slider" destination="dMX-wL-9Q3" id="JEb-9g-3mF"/>
+                        <outlet property="sliderLabel" destination="dLd-mS-d3a" id="AzK-Vd-l1J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Con-bA-ILP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752" y="171"/>
         </scene>
     </scenes>
     <resources>

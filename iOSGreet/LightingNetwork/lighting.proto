@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package lighting;
+option go_package="/lightingpb";
+
+message light {
+  string id = 1;
+  int32 dimLevel = 2;
+  bool isOn = 3;
+}
+
+message DimLightRequest {
+  // The level (0-100) that we ought to dim the light to.
+  int32 dimLevel = 1;
+  string deviceID = 2;
+}
+
+message DimLightResponse {
+  // The dim level that is the final state after all the requests have been processed.
+  int32 dimLevel = 1;
+}
+
+message SetLightIsOnRequest {
+  string id = 1;
+  bool isOn = 2;
+}
+
+message SetLightIsOnResponse {
+  light light = 1;
+}
+
+service LightingService {
+  // Bi-directional streaming dimming RPC.
+  rpc DimLight(stream DimLightRequest) returns (DimLightResponse);
+
+  // Unary on-off RPC.
+  rpc SetIsOnState(SetLightIsOnRequest) returns (SetLightIsOnResponse);
+
+  // Adding a device.
+
+  // Removing a device.
+
+  // Groups. (maybe a couple endpoints, i.e. get all devices, then get all groups)
+}
